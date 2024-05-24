@@ -17,3 +17,8 @@ fruits_to_show = my_fruit_list.loc[fruits_selected]
 streamlit.dataframe(fruits_to_show)
 
 ## *** Looks much better! They should be able to select by fruits. Multiple selection is also permitted.***
+
+streamlit.header("Fruityvice Fruit Advice!")
+import requests
+fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
+streamlit.text(fruityvice_response)
